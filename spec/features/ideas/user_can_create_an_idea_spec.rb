@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'as a user' do
   describe 'when im in idea box' do
    scenario 'i can create an idea' do
-
+_
    end
   end
 end
