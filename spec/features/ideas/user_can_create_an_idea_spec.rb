@@ -8,4 +8,5 @@ describe 'as a user' do
   end
 end
 
+
 # An idea can be created by a user.
