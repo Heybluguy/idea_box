@@ -11,7 +11,6 @@ describe "as a user" do
     fill_in "Description", with: "Riding sleighs"
     click_on "Update"
 
-
     expect(page).to have_content("Riding sleighs")
     expect(current_path).to eq(idea_path(idea))
   end
