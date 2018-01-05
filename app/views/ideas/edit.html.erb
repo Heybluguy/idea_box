@@ -5,5 +5,7 @@
 <%= f.text_field :title %>
 <%= f.label :description %>
 <%= f.text_field :description %>
+<%= f.label :category %>
+<%= f.collection_select :category_id, Category.all, :id, :title %>
 <%= f.submit %>
 <% end %>

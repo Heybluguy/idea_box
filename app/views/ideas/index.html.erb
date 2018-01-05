@@ -1,8 +1,10 @@
-<%# <h1> All Ideas </h1> %>
+<h1> All Ideas </h1>
 
 <% @ideas.each do |idea| %>
 <%= idea.title %><br>
 <%= idea.description %><br>
 <%= link_to "Edit", edit_idea_path(idea)%>
 <%= link_to "Delete", idea_path(idea), method: "delete" %>
-<% end %>
+<% end %><br>
+
+<%= link_to "New Idea", new_idea_path %><br>

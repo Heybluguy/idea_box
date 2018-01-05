@@ -3,12 +3,18 @@ require 'rails_helper'
 describe 'as a user' do
   describe 'when im in idea box' do
     scenario 'i can create an idea' do
+      category = Category.create(title: "Vacation")
+      title = "Summer Trip"
+      description = "Swimming whale sharks"
       visit new_idea_path
 
-      fill_in "Title", with: "Summer Trip"
-      fill_in "Description", with: "Swimming whale sharks"
+      fill_in "Title", with: title
+      fill_in "Description", with: description
+      select("Vacation", :from => "idea[category_id]")
+
       click_button "Create"
-      expect(page).to have_content("Summer Trip")
+
+      expect(page).to have_content(title)
     end
   end
 end
