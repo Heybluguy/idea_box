@@ -2,10 +2,6 @@ class IdeasController < ApplicationController
 
   def new
     @idea = Idea.new
-    # @categories = []
-    # Category.all.each do |category|
-    #   @categories << [category.title, category.id]
-    # end
   end
 
   def create
