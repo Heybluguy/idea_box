@@ -7,5 +7,10 @@
 <%= f.text_field :description %>
 <%= f.label :category %>
 <%= f.collection_select :category_id, Category.all, :id, :title %>
+<%= f.label :image, "Attach an Image" %><br />
+<%= f.file_field :image %>
 <%= f.submit %>
-<% end %>
+<% end %><br>
+
+<%= link_to "New Idea", new_idea_path %>
+

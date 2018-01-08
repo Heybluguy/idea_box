@@ -1,4 +1,10 @@
 
 
-<%= @idea.title %>
-<%= @idea.description %>
+<h3><%= @idea.title %></h3>
+<%= @idea.description %><br>
+<%= link_to "Edit", edit_idea_path(@idea)%><br>
+<%# image_tag @image.url(:medium) %>
+<p>
+  <%= link_to "Ideas", ideas_path %>
+</p>
+

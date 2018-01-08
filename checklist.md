@@ -9,12 +9,12 @@ Ideas
 
 Categories
 [ x] Ideas belong to a category.
-[ /] Categories can be created and destroyed by a logged-in admin user (regular logged in users cannot create categories).
-[ ] Categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
+[ x] Categories can be created by a logged-in admin user (regular logged in users cannot create categories).
+[ x] Categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
 
 Images
-[ ] Users can add an image to their own idea.
-[ ] An image can have many ideas and an idea can have many images.
+[ x] Users can add an image to their own idea.
+[ x] An image can have many ideas and an idea can have many images.
 [ ] Images can only be created by an admin user.
 The most simplistic way to implement images is to store a url to an online image. If you’re feeling fancy and want to upload your own images, check out Carrierwave or Paperclip.
 

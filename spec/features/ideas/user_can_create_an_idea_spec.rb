@@ -3,18 +3,20 @@ require 'rails_helper'
 describe 'as a user' do
   describe 'when im in idea box' do
     scenario 'i can create an idea' do
-      category = Category.create(title: "Vacation")
-      title = "Summer Trip"
-      description = "Swimming whale sharks"
+      category = Category.create(title: 'Vacation')
+      title = 'Summer Trip'
+      description = 'Swimming whale sharks'
       visit new_idea_path
 
-      fill_in "Title", with: title
-      fill_in "Description", with: description
-      select("Vacation", :from => "idea[category_id]")
+      fill_in 'Title', with: title
+      fill_in 'Description', with: description
+      select('Vacation', :from => 'idea[category_id]')
+      attach_file('Image', 'app/assets/images/shuttle.jpg')
 
-      click_button "Create"
+      click_button 'Create'
 
       expect(page).to have_content(title)
+      expect(page).to have_content(description)
     end
   end
 end

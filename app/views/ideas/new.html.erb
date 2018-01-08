@@ -1,13 +1,20 @@
-<%= form_for @idea do |f| %>
+<%= form_for(@idea, html: {multipart: true}) do |f| %>
+<p>
   <%= f.label :title  %>
   <%= f.text_field :title %>
   <%= f.label :description  %>
   <%= f.text_field :description %>
   <%= f.label :category %>
   <%= f.collection_select :category_id, Category.all, :id , :title %>
+  <%# f.label :image, "Attach an Image" %>
+  <%# f.file_field :image %>
+</p>
  <%= f.submit %>
-<% end %>
 
+<% end %>
+<p>
+  <%= link_to "Ideas", ideas_path %>
+</p>
 
 
 

@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "paperclip"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -38,6 +38,7 @@ group :development, :test do
   gem "capybara"
   gem "pry"
   gem "launchy"
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
