@@ -1,5 +1,4 @@
-class Admin::CategoriesController < ApplicationController
-  before_action :require_admin
+class Admin::CategoriesController < Admin::BaseController
 
   def require_admin
     render file: "/public/404" unless current_admin?
@@ -19,11 +18,6 @@ class Admin::CategoriesController < ApplicationController
     @categories = Category.all
   end
 
-  # def destroy
-  #   @category = Category.find(params[:id])
-  #   @category.delete
-  #   redirect_to admin_categories_path
-  # end
 
     private
       def category_params
