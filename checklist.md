@@ -9,8 +9,8 @@ Ideas
 
 Categories
 [ x] Ideas belong to a category.
-[ x] Categories can be created by a logged-in admin user (regular logged in users cannot create categories).
-[ x] Categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
+[ /] Categories can be created by a logged-in admin user (regular logged in users cannot create categories).
+[ /] Categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
 
 Images
 [ x] Users can add an image to their own idea.

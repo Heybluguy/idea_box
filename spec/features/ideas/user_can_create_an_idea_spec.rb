@@ -11,12 +11,10 @@ describe 'as a user' do
       fill_in 'Title', with: title
       fill_in 'Description', with: description
       select('Vacation', :from => 'idea[category_id]')
-      attach_file('Image', 'app/assets/images/shuttle.jpg')
 
-      click_button 'Create'
-
-      # expect(page).to have_content(title)
-      # expect(page).to have_content(description)
+      click_button 'Create Idea'
+      expect(page).to have_content(title)
+      expect(page).to have_content(description)
     end
   end
 end

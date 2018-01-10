@@ -1,1 +1,2 @@
-  <h1>Welcome, <%= @user.username.capitalize %>!</h1>
+  <h1>Welcome, <%= current_user.username.capitalize %>!</h1>
+<%= link_to "Logout", session_path, method: :delete  %>
