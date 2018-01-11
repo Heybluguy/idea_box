@@ -1,5 +1,11 @@
 <h3> Admin Categories</h3>
 
 <% @categories.each do |category| %>
-<%= category.title %>
+  <%= category.title %>
+  <%= link_to "Delete", admin_category_path(category), method: :delete %><br>
 <% end %>
+
+<%= link_to  "Create Category", new_admin_category_path %>
+<p>
+  <%= link_to  "Ideas", admin_ideas_path %>
+</p>

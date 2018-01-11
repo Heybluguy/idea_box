@@ -1,0 +1,15 @@
+<h1> All Ideas </h1>
+
+<% @ideas.each do |idea| %>
+<p>
+  <b><%= link_to idea.title, idea_path(idea) %></b><br>
+  <%= idea.description %><br>
+  <%= link_to "Edit", edit_idea_path(idea)%>
+  <%= link_to "Delete", idea_path(idea), method: "delete" %>
+</p>
+<% end %><br>
+
+<%= link_to "New Idea", new_admin_idea_path %>
+<p>
+  <%= link_to "Categories", admin_categories_path %>
+</p>

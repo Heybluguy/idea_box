@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.all
+    @ideas = Idea.where(user_id: current_user.id)
   end
 
   def new
@@ -8,7 +8,7 @@ class IdeasController < ApplicationController
   end
 
   def create
-    idea = Idea.new(idea_params)
+    idea = current_user.ideas.new(idea_params)
     idea.category_id=params[:idea][:category_id]
     if idea.save
       redirect_to ideas_path
